@@ -25,3 +25,11 @@ user: 1003@gmail.com
 password: 123456
 
 Desde producción se pueden crear usuarios nuevos haciendo un primer login, y así el usuario quedará registrado (con email y password).
+
+**Notas: Backend**
+
+- Para los métodos de validación de usuarios, se han utilizado los propios del servicio de Firebase *Authentication*.
+- BD: *Cloud Firestore*, (modo de pruebas con tiempo limitado de uso).
+
+
+
