@@ -15,7 +15,8 @@
 
 **Users**
 
-Se han creado los siguientes usuarios:
+Se han creado los siguientes usuarios:  
+(son usuarios de prueba y aparecerán con el tiempo en contador de su último registro)
 
 user: 103@gmail.com  
 password: 123456
