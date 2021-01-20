@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { firebase, db } from '../../firebase/firebaseConfig';
+import switchLoginMethods from '../../firebase/users/sigInAndCreateSwitch';
 import styles from './style.module.css';
 import Picture from '../../components/picture';
 import Error from '../../components/error';
@@ -22,34 +22,14 @@ const LoginIn = ({nextStep}) => {
             [name] : value
         });
         
-        setErrors({})
+        setErrors({});
     }
    
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const { email } = values;
-        const docRef = db.collection('users').doc(email || 'default');
 
-        docRef.get().then(doc => {
-            if (doc.exists) {
-                firebase.auth().signInWithEmailAndPassword(email, password)
-                .then((user) => {
-                    nextStep();
-                })
-                .catch((error) => {
-                    setErrors(error);
-                });
-            } else {
-                firebase.auth().createUserWithEmailAndPassword(email, password)
-                .then((user) => {
-                    nextStep();
-                })
-                .catch((error) => {
-                    setErrors(error);
-                });
-            }
-        });       
+        switchLoginMethods(email, password, nextStep, setErrors);
     }
     
     const {email, password} = values;

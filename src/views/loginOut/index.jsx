@@ -25,7 +25,7 @@ const LoginOut = ({prevStep}) => {
         if(!unSubscribe) {
             const user = firebase.auth().currentUser;
             const dataLastDb = moment().format("YYYY-MM-DDTHH:mm");
-            const docRef = db.collection("users").doc(user.email);
+            const docRef = db.collection('users').doc(user.email);
 
             docRef.get().then(doc => {
                 if(doc.exists) {
