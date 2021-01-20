@@ -1,0 +1,16 @@
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.entry span:first-child {
+    font-size: 42px;
+    min-height: 50px;
+}
+
+.entry span {
+    font-size: 15px;
+    font-weight: 500;
+}

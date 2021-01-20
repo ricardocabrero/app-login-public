@@ -1,0 +1,15 @@
+.form {
+    width: 60%;
+}
+
+@media(max-width: 375px) {
+    .form {
+        width: 70%;
+    } 
+}
+
+.field {
+    padding-bottom: 25px;
+    position: relative;
+}
+

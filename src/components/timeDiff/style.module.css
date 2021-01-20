@@ -1,0 +1,16 @@
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin: 45px auto 70px;
+    color: #929090;
+    min-height: 68px;
+}
+
+@media(max-width: 375px) {
+    .time {
+        width: 85%;
+    }   
+}
+
