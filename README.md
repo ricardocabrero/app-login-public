@@ -23,4 +23,4 @@ password: 123456
 user: 1003@gmail.com  
 password: 123456
 
-Desde producción se pueden crear usuarios nuevos haciendo un primer login, y así el usuario quedará registrado.
+Desde producción se pueden crear usuarios nuevos haciendo un primer login, y así el usuario quedará registrado (con email y password).
