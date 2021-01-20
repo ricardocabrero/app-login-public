@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {firebase, db} from '../../firebase/firebaseConfig';
+import { firebase, db } from '../../firebase/firebaseConfig';
+import logoutFirebase from '../../firebase/users/logoutFn';
 import moment from 'moment';
 import styles from './style.module.css';
 import TimeDiff from '../../components/timeDiff';
@@ -54,7 +55,7 @@ const LoginOut = ({prevStep}) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        firebase.auth().signOut();
+        logoutFirebase();
         prevStep();
     }
 
