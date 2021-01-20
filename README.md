@@ -17,7 +17,7 @@
 
 Se han creado los siguientes usuarios:
 
-user: 103@gmail.com
+user: 103@gmail.com  
 password: 123456
 
 user: 1003@gmail.com
