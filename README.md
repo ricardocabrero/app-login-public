@@ -20,7 +20,7 @@ Se han creado los siguientes usuarios:
 user: 103@gmail.com  
 password: 123456
 
-user: 1003@gmail.com
+user: 1003@gmail.com  
 password: 123456
 
 Desde producción se pueden crear usuarios nuevos haciendo un primer login, y así el usuario quedará registrado.
