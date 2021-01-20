@@ -1,25 +1,25 @@
 
 const formatTime = (data, operator) => {
-    const r =  data % operator;
-    const rF = r.toString();
+    const result =  data % operator;
+    const resultFormat = result.toString();
 
-    if(rF.length < 2) {
-        return `0${rF}`;
+    if(resultFormat.length < 2) {
+        return `0${resultFormat}`;
     }
-    return rF;
+    return resultFormat;
 }
 
 const formatDays = (data) => {
-    const r = data;
-    const rF = r.toString();
+    const result = data;
+    const resultFormat = result.toString();
 
-    if(rF.length < 2) {
-        return `0${rF}`;
+    if(resultFormat.length < 2) {
+        return `0${resultFormat}`;
     }
-    if(r > 99) {
+    if(result > 99) {
         return `+${99}`;
     }
-    return rF;
+    return resultFormat;
 }
 
 export {

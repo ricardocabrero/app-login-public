@@ -7,16 +7,16 @@ const Main = () => {
     const [loginIn, setLogin] = useState(false);
 
     const handleLogoutView = () => {
-        setLogin(true)
+        setLogin(true);
     }
 
     const handleLoginView = () => {
-        setLogin(false)
+        setLogin(false);
     }
 
     const conditionalRender = loginIn 
     ? <LoginOut prevStep={handleLoginView}/>
-    : <LoginIn nextStep={handleLogoutView}/> 
+    : <LoginIn nextStep={handleLogoutView}/>;
 
 
     return(

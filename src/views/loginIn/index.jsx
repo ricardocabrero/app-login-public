@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { firebase, db } from '../../firebase/firebaseConfig';
 import styles from './style.module.css';
-import Picture from '../picture';
-import Error from '../error';
-import Button from '../button';
-import Input from '../input';
+import Picture from '../../components/picture';
+import Error from '../../components/error';
+import Button from '../../components/button';
+import Input from '../../components/input';
 
 const LoginIn = ({nextStep}) => {
     const [errors, setErrors] = useState({})
@@ -29,7 +29,7 @@ const LoginIn = ({nextStep}) => {
         e.preventDefault();
 
         const { email } = values;
-        const docRef = db.collection("users").doc(email || 'default');
+        const docRef = db.collection('users').doc(email || 'default');
 
         docRef.get().then(doc => {
             if (doc.exists) {
@@ -53,7 +53,7 @@ const LoginIn = ({nextStep}) => {
     }
     
     const {email, password} = values;
-    const conditionalRederError = errors.message && <Error message={errors.message}/>
+    const conditionalRederError = errors.message && <Error message={errors.message}/>;
 
     return(
         <form onSubmit={handleSubmit} className={styles.form}>

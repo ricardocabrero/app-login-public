@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {firebase, db} from '../../firebase/firebaseConfig';
 import moment from 'moment';
 import styles from './style.module.css';
-import TimeDiff from '../timeDiff';
-import Button from '../button';
-import Title from '../title';
-import Paragraph from '../paragraph';
+import TimeDiff from '../../components/timeDiff';
+import Button from '../../components/button';
+import Title from '../../components/title';
+import Paragraph from '../../components/paragraph';
 
 const LoginOut = ({prevStep}) => {
 
@@ -39,7 +39,7 @@ const LoginOut = ({prevStep}) => {
                     });
                 } 
 
-                db.collection("users").doc(user.email).set({ 
+                db.collection('users').doc(user.email).set({ 
                     dataLastDb,
                 });
             });

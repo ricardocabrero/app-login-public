@@ -6,6 +6,7 @@ import Entry from './entry';
 
 const TimeDiff = ({time}) => {
     const {days, hours, minutes, seconds} = time;
+    
     const daysF = formatDays(days);
     const hoursF = formatTime(hours, 24);
     const minutesF = formatTime(minutes, 60);
