@@ -5,19 +5,33 @@ import {formatDays, formatTime} from '../../utils/formats';
 import Entry from './entry';
 
 const TimeDiff = ({time}) => {
+
     const {days, hours, minutes, seconds} = time;
     
-    const daysF = formatDays(days);
-    const hoursF = formatTime(hours, 24);
-    const minutesF = formatTime(minutes, 60);
-    const secondsF = formatTime(seconds, 60);
+    const timeEntries = [
+        {
+            time: formatDays(days),
+            text: 'days'
+        },
+        {
+            time: formatTime(hours, 24),
+            text: 'hours'
+        },
+        {
+            time: formatTime(minutes, 60),
+            text: 'minutes'
+        },
+        {
+            time: formatTime(seconds, 60),
+            text: 'seconds'
+        },
+    ];
 
     return (
         <div className={styles.time}>
-            <Entry time={daysF} text={'days'}/>
-            <Entry time={hoursF} text={'hours'}/>
-            <Entry time={minutesF} text={'minutes'}/>
-            <Entry time={secondsF} text={'seconds'}/>
+            {timeEntries.map(el => 
+                <Entry key={el.text} time={el.time} text={el.text}/>
+            )}
         </div>
     )
 }
